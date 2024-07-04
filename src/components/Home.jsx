@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Row, Col, Card, Button } from "react-bootstrap";
+import { Row, Col, Card, Button, Container } from "react-bootstrap";
 
 class Home extends Component {
   constructor(props) {
@@ -84,7 +84,15 @@ class Home extends Component {
         <Row>
           {this.state.films1.slice(0, 6).map((film) => (
             <Col key={film.imdbID} xs={12} md={4} lg={2} className="mb-4">
-              <img classname="img-fluid" src={film.Poster} alt="Movie" style={{ width: "200px" }} />
+              <Card className="bg-transparent">
+                <Card.Img variant="top" src={film.Poster} />
+                <Card.Body>
+                  <Card.Title className="text-white">{film.Title}</Card.Title>
+                  {/* <Link to="/movieDetails/" className="btn btn-primary text-white">
+                  Dettagli
+                </Link> */}
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>
@@ -93,7 +101,15 @@ class Home extends Component {
         <Row>
           {this.state.films2.slice(0, 6).map((film) => (
             <Col key={film.imdbID} xs={12} md={4} lg={2} className="mb-4">
-              <img classname="img-fluid" src={film.Poster} alt="Movie" style={{ width: "200px" }} />
+              <Card className="bg-transparent">
+                <Card.Img variant="top" src={film.Poster} />
+                <Card.Body>
+                  <Card.Title className="text-white">{film.Title}</Card.Title>
+                  {/* <Link to="/movieDetails/" className="btn btn-primary text-white">
+                  Dettagli
+                </Link> */}
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>
@@ -102,7 +118,15 @@ class Home extends Component {
         <Row>
           {this.state.films3.slice(0, 6).map((film) => (
             <Col key={film.imdbID} xs={12} md={4} lg={2} className="mb-4">
-              <img classname="img-fluid" src={film.Poster} alt="Movie" style={{ width: "200px" }} />
+              <Card className="bg-transparent">
+                <Card.Img variant="top" src={film.Poster} />
+                <Card.Body>
+                  <Card.Title className="text-white">{film.Title}</Card.Title>
+                  {/* <Link to="/movieDetails/" className="btn btn-primary text-white">
+                  Dettagli
+                </Link> */}
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>

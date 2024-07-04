@@ -6,17 +6,24 @@ import CustomFooter from "./components/CustomFooter";
 import { Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TvShows from "./components/TvShows";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
-    <BrowserRouter>
-      <CustomNavbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tvshows" element={<TvShows />} />
-        {/* <Route path="/tvshows/movie-details/:movieId" element={<Details />} /> */}
-      </Routes>
-    </BrowserRouter>
+    <div className="bg-container">
+      {" "}
+      <Container>
+        <BrowserRouter>
+          <CustomNavbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tvshows" element={<TvShows />} />
+            <Route path="/tvshows/movie-details/:movieId" element={MovieDetails} />
+          </Routes>
+          <CustomFooter />
+        </BrowserRouter>
+      </Container>
+    </div>
   );
 }
 

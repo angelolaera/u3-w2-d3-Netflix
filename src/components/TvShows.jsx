@@ -32,7 +32,7 @@ const TvShows = () => {
       <h1 className="text-white">Spider man Saga</h1>
       <Row>
         {films1.slice(0, 6).map((film) => (
-          <Col key={film.imdbID} xs={12} md={4} lg={2} className="mb-4">
+          <Col key={film.imdbID} xs={12} md={4} lg={4} className="mb-4">
             <Card className="bg-transparent">
               <Card.Img variant="top" src={film.Poster} />
               <Card.Body>
